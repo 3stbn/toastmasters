@@ -38,6 +38,7 @@ export default function TimerView({ participant, onStop }: TimerViewProps) {
   const [flash, setFlash] = useState(false);
   const prevPhaseRef = useRef<Phase>('neutral');
   const intervalRef = useRef<number | null>(null);
+  const lastTapRef = useRef(0);
 
   const { green, yellow, red } = participant.type;
   const phase = getPhase(elapsed, green, yellow, red);
@@ -70,6 +71,13 @@ export default function TimerView({ participant, onStop }: TimerViewProps) {
   return (
     <div
       className={`relative flex min-h-dvh flex-col items-center justify-center transition-colors duration-300 ${bgClass}`}
+      onClick={() => {
+        const now = Date.now();
+        if (now - lastTapRef.current < 400) {
+          onStop(elapsed);
+        }
+        lastTapRef.current = now;
+      }}
     >
       {phase === 'neutral' && (
         <p className="text-[10rem] font-bold leading-none tabular-nums font-mono">
@@ -81,7 +89,7 @@ export default function TimerView({ participant, onStop }: TimerViewProps) {
           e.stopPropagation();
           onStop(elapsed);
         }}
-        className="absolute top-4 left-4 flex h-12 w-12 items-center justify-center rounded-full bg-black/20 text-2xl backdrop-blur-sm transition-all duration-150 hover:bg-black/30 active:bg-black/40"
+        className="absolute top-4 right-4 flex h-12 w-12 items-center justify-center rounded-full bg-black/20 text-2xl backdrop-blur-sm transition-all duration-150 hover:bg-black/30 active:bg-black/40"
       >
         ←
       </button>

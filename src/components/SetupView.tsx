@@ -11,6 +11,7 @@ interface SetupViewProps {
   onRemoveParticipant: (id: string) => void;
   onRemoveResult: (index: number) => void;
   onDemo: () => void;
+  onClearAll: () => void;
 }
 
 function formatTime(seconds: number): string {
@@ -25,7 +26,7 @@ function getStatus(elapsed: number, type: Result['type']): { label: string; clas
   return { label: 'Over', className: 'text-red-600' };
 }
 
-export default function SetupView({ participants, setParticipants, results, onStart, onRemoveParticipant, onRemoveResult, onDemo }: SetupViewProps) {
+export default function SetupView({ participants, setParticipants, results, onStart, onRemoveParticipant, onRemoveResult, onDemo, onClearAll }: SetupViewProps) {
   const [name, setName] = useState('');
   const [typeId, setTypeId] = useState(SPEECH_TYPES[0].id);
 
@@ -52,12 +53,18 @@ export default function SetupView({ participants, setParticipants, results, onSt
       </div>
 
       {/* Demo button */}
-      <div className="animate-fade-in flex justify-center" style={{ animationDelay: '25ms' }}>
+      <div className="animate-fade-in flex justify-center gap-3" style={{ animationDelay: '25ms' }}>
         <button
           onClick={onDemo}
           className="rounded-xl border border-gray-200 bg-white px-5 py-2 text-sm font-semibold text-gray-500 shadow-sm transition-all duration-150 hover:bg-gray-50 hover:text-gray-700 active:bg-gray-100"
         >
           Demo
+        </button>
+        <button
+          onClick={onClearAll}
+          className="rounded-xl border border-red-200 bg-white px-5 py-2 text-sm font-semibold text-red-500 shadow-sm transition-all duration-150 hover:bg-red-50 hover:text-red-600 active:bg-red-100"
+        >
+          Clear All
         </button>
       </div>
 
