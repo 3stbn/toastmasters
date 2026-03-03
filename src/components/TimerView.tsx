@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, useCallback } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import type { Participant } from '../types';
 
 interface TimerViewProps {
@@ -25,9 +25,14 @@ const PHASE_STYLES: Record<Phase, string> = {
 };
 
 
+function formatTime(seconds: number): string {
+  const m = Math.floor(seconds / 60);
+  const s = seconds % 60;
+  return `${m}:${s.toString().padStart(2, '0')}`;
+}
+
 export default function TimerView({ participant, onStop }: TimerViewProps) {
   const [elapsed, setElapsed] = useState(0);
-  const [running, setRunning] = useState(true);
   const [flash, setFlash] = useState(false);
   const prevPhaseRef = useRef<Phase>('neutral');
   const intervalRef = useRef<number | null>(null);
@@ -49,39 +54,26 @@ export default function TimerView({ participant, onStop }: TimerViewProps) {
 
   // Timer interval
   useEffect(() => {
-    if (running) {
-      intervalRef.current = window.setInterval(() => {
-        setElapsed((prev) => prev + 1);
-      }, 1000);
-    }
+    intervalRef.current = window.setInterval(() => {
+      setElapsed((prev) => prev + 1);
+    }, 1000);
     return () => {
       if (intervalRef.current !== null) window.clearInterval(intervalRef.current);
     };
-  }, [running]);
-
-  const toggleTimer = useCallback(() => {
-    setRunning((r) => !r);
   }, []);
 
-  // Keyboard support: arrow up/down or space to toggle
-  useEffect(() => {
-    function handleKey(e: KeyboardEvent) {
-      if (e.key === 'ArrowUp' || e.key === 'ArrowDown' || e.key === ' ') {
-        e.preventDefault();
-        toggleTimer();
-      }
-    }
-    window.addEventListener('keydown', handleKey);
-    return () => window.removeEventListener('keydown', handleKey);
-  }, [toggleTimer]);
 
   const bgClass = flash ? 'bg-white text-gray-900' : PHASE_STYLES[phase];
 
   return (
     <div
       className={`relative flex min-h-dvh flex-col items-center justify-center transition-colors duration-300 ${bgClass}`}
-      onClick={toggleTimer}
     >
+      {phase === 'neutral' && (
+        <p className="text-[10rem] font-bold leading-none tabular-nums font-mono">
+          {formatTime(elapsed)}
+        </p>
+      )}
       <button
         onClick={(e) => {
           e.stopPropagation();

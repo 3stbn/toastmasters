@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const PHASES = [
   { bg: 'bg-gray-100 text-gray-900', label: 'Neutral' },
@@ -14,20 +14,31 @@ interface DemoViewProps {
 
 export default function DemoView({ onExit }: DemoViewProps) {
   const [index, setIndex] = useState(0);
+  const [flash, setFlash] = useState(false);
 
   function advance() {
     if (index < PHASES.length - 1) {
+      setFlash(true);
+      if (navigator.vibrate) navigator.vibrate(500);
       setIndex((i) => i + 1);
     } else {
       onExit();
     }
   }
 
+  useEffect(() => {
+    if (flash) {
+      const timeout = setTimeout(() => setFlash(false), 300);
+      return () => clearTimeout(timeout);
+    }
+  }, [flash]);
+
   const phase = PHASES[index];
+  const bgClass = flash ? 'bg-white text-gray-900' : phase.bg;
 
   return (
     <div
-      className={`flex min-h-dvh flex-col items-center justify-center transition-colors duration-300 ${phase.bg}`}
+      className={`flex min-h-dvh flex-col items-center justify-center transition-colors duration-300 ${bgClass}`}
       onClick={advance}
     >
       <button
