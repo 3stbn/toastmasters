@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import type { Participant } from '../types';
+import usePresentation from '../usePresentation';
 
 interface TimerViewProps {
   participant: Participant;
@@ -32,6 +33,7 @@ function formatTime(seconds: number): string {
 }
 
 export default function TimerView({ participant, onStop }: TimerViewProps) {
+  usePresentation();
   const [elapsed, setElapsed] = useState(0);
   const [flash, setFlash] = useState(false);
   const prevPhaseRef = useRef<Phase>('neutral');

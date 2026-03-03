@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import usePresentation from '../usePresentation';
 
 const PHASES = [
   { bg: 'bg-gray-100 text-gray-900', label: 'Neutral' },
@@ -13,6 +14,7 @@ interface DemoViewProps {
 }
 
 export default function DemoView({ onExit }: DemoViewProps) {
+  usePresentation();
   const [index, setIndex] = useState(0);
   const [flash, setFlash] = useState(false);
 
