@@ -113,8 +113,10 @@ export default function SetupView({ participants, setParticipants, results, onSt
                 key={p.id}
                 participant={p}
                 index={i}
+                result={results.find((r) => r.participantId === p.id)}
                 onStart={() => onStart(p)}
                 onRemove={() => onRemoveParticipant(p.id)}
+                onClearResult={() => onRemoveResult(results.findIndex((r) => r.participantId === p.id))}
               />
             ))}
           </div>
