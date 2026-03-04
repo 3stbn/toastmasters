@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import usePresentation from '../usePresentation';
-import type { Translations } from '../i18n';
 import { ArrowLeft } from 'lucide-react';
 
 const PHASES = [
@@ -13,10 +12,9 @@ const PHASES = [
 
 interface DemoViewProps {
   onExit: () => void;
-  i18n: Translations;
 }
 
-export default function DemoView({ onExit, i18n }: DemoViewProps) {
+export default function DemoView({ onExit }: DemoViewProps) {
   usePresentation();
   const [index, setIndex] = useState(0);
   const [flash, setFlash] = useState(false);

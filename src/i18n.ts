@@ -71,7 +71,7 @@ const translations = {
       { title: 'Modo Demo', body: 'Usa el botón Demo para recorrer todos los colores manualmente — ideal para mostrar a la audiencia qué esperar antes de comenzar la sesión.', icon: '🎬' },
     ],
   },
-} as const;
+};
 
 export type Lang = keyof typeof translations;
 export type Translations = typeof translations['en'];

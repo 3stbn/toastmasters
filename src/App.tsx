@@ -61,7 +61,7 @@ export default function App() {
   }
 
   if (demo) {
-    return <DemoView onExit={() => setDemo(false)} i18n={i18n} />;
+    return <DemoView onExit={() => setDemo(false)} />;
   }
 
   if (activeParticipant) {
