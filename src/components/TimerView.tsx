@@ -1,10 +1,12 @@
 import { useState, useEffect, useRef } from 'react';
 import type { Participant } from '../types';
 import usePresentation from '../usePresentation';
+import { ArrowLeft } from 'lucide-react';
 
 interface TimerViewProps {
   participant: Participant;
   onStop: (elapsed: number) => void;
+  showTimer: boolean;
 }
 
 type Phase = 'neutral' | 'green' | 'yellow' | 'red' | 'over';
@@ -32,7 +34,7 @@ function formatTime(seconds: number): string {
   return `${m}:${s.toString().padStart(2, '0')}`;
 }
 
-export default function TimerView({ participant, onStop }: TimerViewProps) {
+export default function TimerView({ participant, onStop, showTimer }: TimerViewProps) {
   usePresentation();
   const [elapsed, setElapsed] = useState(0);
   const [flash, setFlash] = useState(false);
@@ -79,7 +81,7 @@ export default function TimerView({ participant, onStop }: TimerViewProps) {
         lastTapRef.current = now;
       }}
     >
-      {phase === 'neutral' && (
+      {showTimer && (
         <p className="text-7xl font-bold leading-none tabular-nums font-mono sm:text-[10rem]">
           {formatTime(elapsed)}
         </p>
@@ -89,9 +91,9 @@ export default function TimerView({ participant, onStop }: TimerViewProps) {
           e.stopPropagation();
           onStop(elapsed);
         }}
-        className="absolute top-4 right-4 flex h-12 w-12 items-center justify-center rounded-full bg-black/20 text-2xl backdrop-blur-sm transition-all duration-150 hover:bg-black/30 active:bg-black/40"
+        className="absolute top-4 right-4 flex h-12 w-12 items-center justify-center rounded-full bg-black/20 backdrop-blur-sm transition-all duration-150 hover:bg-black/30 active:bg-black/40"
       >
-        ←
+        <ArrowLeft className="h-6 w-6" />
       </button>
     </div>
   );

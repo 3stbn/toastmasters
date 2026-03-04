@@ -1,4 +1,6 @@
 import type { Participant, Result } from '../types';
+import type { Translations } from '../i18n';
+import { Play, RotateCcw, Trash2 } from 'lucide-react';
 
 interface ParticipantRowProps {
   participant: Participant;
@@ -7,6 +9,7 @@ interface ParticipantRowProps {
   onStart: () => void;
   onRemove: () => void;
   onClearResult: () => void;
+  i18n: Translations;
 }
 
 const ACCENT_COLORS: Record<string, string> = {
@@ -22,13 +25,13 @@ function fmt(seconds: number): string {
   return `${m}:${s.toString().padStart(2, '0')}`;
 }
 
-function getStatus(elapsed: number, green: number, red: number): { label: string; className: string } {
-  if (elapsed < green) return { label: 'Under', className: 'text-orange-500' };
-  if (elapsed <= red) return { label: 'On Time', className: 'text-green-600' };
-  return { label: 'Over', className: 'text-red-600' };
+function getStatus(elapsed: number, green: number, red: number, i18n: Translations): { label: string; className: string } {
+  if (elapsed < green) return { label: i18n.under, className: 'text-orange-500' };
+  if (elapsed <= red) return { label: i18n.onTime, className: 'text-green-600' };
+  return { label: i18n.over, className: 'text-red-600' };
 }
 
-export default function ParticipantRow({ participant, index, result, onStart, onRemove, onClearResult }: ParticipantRowProps) {
+export default function ParticipantRow({ participant, index, result, onStart, onRemove, onClearResult, i18n }: ParticipantRowProps) {
   const accent = ACCENT_COLORS[participant.type.id] || 'border-l-gray-400';
   const { green, yellow, red } = participant.type;
 
@@ -48,23 +51,25 @@ export default function ParticipantRow({ participant, index, result, onStart, on
         {result ? (
           <button
             onClick={onClearResult}
-            className="shrink-0 rounded-full bg-orange-500 px-4 py-2 text-sm font-semibold text-white transition-all duration-150 hover:bg-orange-400 active:bg-orange-600 sm:px-5 sm:py-2.5 sm:text-base"
+            className="flex shrink-0 items-center gap-1.5 rounded-full bg-orange-500 px-4 py-2 text-sm font-semibold text-white transition-all duration-150 hover:bg-orange-400 active:bg-orange-600 sm:px-5 sm:py-2.5 sm:text-base"
           >
-            Reset
+            <RotateCcw className="h-4 w-4" />
+            {i18n.reset}
           </button>
         ) : (
           <button
             onClick={onStart}
-            className="shrink-0 rounded-full bg-green-600 px-4 py-2 text-sm font-semibold text-white transition-all duration-150 hover:bg-green-500 active:bg-green-700 sm:px-5 sm:py-2.5 sm:text-base"
+            className="flex shrink-0 items-center gap-1.5 rounded-full bg-green-600 px-4 py-2 text-sm font-semibold text-white transition-all duration-150 hover:bg-green-500 active:bg-green-700 sm:px-5 sm:py-2.5 sm:text-base"
           >
-            Start
+            <Play className="h-4 w-4" />
+            {i18n.start}
           </button>
         )}
         <button
           onClick={onRemove}
-          className="shrink-0 rounded-full bg-red-500 px-3 py-2 text-sm font-semibold text-white transition-all duration-150 hover:bg-red-400 active:bg-red-600 sm:px-4 sm:py-2.5 sm:text-base"
+          className="shrink-0 rounded-full bg-red-500 p-2 text-white transition-all duration-150 hover:bg-red-400 active:bg-red-600 sm:p-2.5"
         >
-          Remove
+          <Trash2 className="h-4 w-4" />
         </button>
       </div>
 
@@ -79,8 +84,8 @@ export default function ParticipantRow({ participant, index, result, onStart, on
       {result && (
         <div className="flex items-center gap-3 pl-11 text-sm">
           <span className="font-mono text-gray-700">{fmt(result.elapsed)}</span>
-          <span className={`font-semibold ${getStatus(result.elapsed, green, red).className}`}>
-            {getStatus(result.elapsed, green, red).label}
+          <span className={`font-semibold ${getStatus(result.elapsed, green, red, i18n).className}`}>
+            {getStatus(result.elapsed, green, red, i18n).label}
           </span>
         </div>
       )}

@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import usePresentation from '../usePresentation';
+import type { Translations } from '../i18n';
+import { ArrowLeft } from 'lucide-react';
 
 const PHASES = [
   { bg: 'bg-gray-100 text-gray-900', label: 'Neutral' },
@@ -11,9 +13,10 @@ const PHASES = [
 
 interface DemoViewProps {
   onExit: () => void;
+  i18n: Translations;
 }
 
-export default function DemoView({ onExit }: DemoViewProps) {
+export default function DemoView({ onExit, i18n }: DemoViewProps) {
   usePresentation();
   const [index, setIndex] = useState(0);
   const [flash, setFlash] = useState(false);
@@ -48,9 +51,9 @@ export default function DemoView({ onExit }: DemoViewProps) {
           e.stopPropagation();
           onExit();
         }}
-        className="absolute top-4 right-4 flex h-12 w-12 items-center justify-center rounded-full bg-black/20 text-2xl backdrop-blur-sm transition-all duration-150 hover:bg-black/30 active:bg-black/40"
+        className="absolute top-4 right-4 flex h-12 w-12 items-center justify-center rounded-full bg-black/20 backdrop-blur-sm transition-all duration-150 hover:bg-black/30 active:bg-black/40"
       >
-        ←
+        <ArrowLeft className="h-6 w-6" />
       </button>
     </div>
   );
