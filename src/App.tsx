@@ -22,7 +22,11 @@ export default function App() {
   const [demo, setDemo] = useState(false);
   const [showTimer, setShowTimer] = useState(() => loadJSON('showTimer', false));
   const [showOnboarding, setShowOnboarding] = useState(() => !localStorage.getItem('onboardingSeen'));
-  const [lang, setLang] = useState<Lang>(() => (localStorage.getItem('lang') as Lang) || 'en');
+  const [lang, setLang] = useState<Lang>(() => {
+    const stored = localStorage.getItem('lang') as Lang | null;
+    if (stored) return stored;
+    return navigator.language.startsWith('es') ? 'es' : 'en';
+  });
 
   const i18n = t(lang);
 
