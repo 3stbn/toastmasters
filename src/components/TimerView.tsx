@@ -80,7 +80,7 @@ export default function TimerView({ participant, onStop }: TimerViewProps) {
       }}
     >
       {phase === 'neutral' && (
-        <p className="text-[10rem] font-bold leading-none tabular-nums font-mono">
+        <p className="text-7xl font-bold leading-none tabular-nums font-mono sm:text-[10rem]">
           {formatTime(elapsed)}
         </p>
       )}

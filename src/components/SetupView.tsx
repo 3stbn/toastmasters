@@ -42,7 +42,7 @@ export default function SetupView({ participants, setParticipants, results, onSt
   }
 
   return (
-    <div className="mx-auto flex min-h-dvh max-w-2xl flex-col gap-6 p-6">
+    <div className="mx-auto flex min-h-dvh max-w-2xl flex-col gap-4 p-4 sm:gap-6 sm:p-6">
       {/* Header */}
       <div className="animate-fade-in flex items-center justify-center gap-3 pt-2">
         <span className="text-3xl" role="img" aria-label="clock">⏱</span>
@@ -69,32 +69,34 @@ export default function SetupView({ participants, setParticipants, results, onSt
       </div>
 
       {/* Add participant form */}
-      <div className="animate-fade-in flex gap-3" style={{ animationDelay: '50ms' }}>
+      <div className="animate-fade-in flex flex-col gap-3 sm:flex-row" style={{ animationDelay: '50ms' }}>
         <input
           type="text"
           placeholder="Participant name"
           value={name}
           onChange={(e) => setName(e.target.value)}
           onKeyDown={(e) => e.key === 'Enter' && handleAdd()}
-          className="flex-1 rounded-xl border border-gray-200 bg-white px-4 py-3 text-lg shadow-sm transition-all duration-200 focus:border-blue-400 focus:bg-blue-50/30 focus:outline-none focus:ring-2 focus:ring-blue-100"
+          className="flex-1 rounded-xl border border-gray-200 bg-white px-4 py-3 text-base shadow-sm transition-all duration-200 focus:border-blue-400 focus:bg-blue-50/30 focus:outline-none focus:ring-2 focus:ring-blue-100"
         />
-        <select
-          value={typeId}
-          onChange={(e) => setTypeId(e.target.value)}
-          className="rounded-xl border border-gray-200 bg-white px-4 py-3 text-lg shadow-sm transition-all duration-200 focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-100"
-        >
-          {SPEECH_TYPES.map((t) => (
-            <option key={t.id} value={t.id}>
-              {t.label}
-            </option>
-          ))}
-        </select>
-        <button
-          onClick={handleAdd}
-          className="shrink-0 rounded-xl bg-blue-600 px-6 py-3 text-lg font-semibold text-white shadow-sm transition-all duration-150 hover:bg-blue-500 active:bg-blue-700"
-        >
-          Add
-        </button>
+        <div className="flex gap-3">
+          <select
+            value={typeId}
+            onChange={(e) => setTypeId(e.target.value)}
+            className="flex-1 rounded-xl border border-gray-200 bg-white px-4 py-3 text-base shadow-sm transition-all duration-200 focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-100 sm:flex-initial"
+          >
+            {SPEECH_TYPES.map((t) => (
+              <option key={t.id} value={t.id}>
+                {t.label}
+              </option>
+            ))}
+          </select>
+          <button
+            onClick={handleAdd}
+            className="shrink-0 rounded-xl bg-blue-600 px-6 py-3 text-base font-semibold text-white shadow-sm transition-all duration-150 hover:bg-blue-500 active:bg-blue-700"
+          >
+            Add
+          </button>
+        </div>
       </div>
 
       {/* Participants list */}

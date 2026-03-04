@@ -42,27 +42,27 @@ export default function ParticipantRow({ participant, index, result, onStart, on
           {index + 1}
         </span>
         <div className="flex-1 min-w-0">
-          <p className="text-lg font-semibold truncate text-gray-900">{participant.name}</p>
+          <p className="text-base font-semibold truncate text-gray-900 sm:text-lg">{participant.name}</p>
           <p className="text-sm text-gray-500">{participant.type.label}</p>
         </div>
         {result ? (
           <button
             onClick={onClearResult}
-            className="shrink-0 rounded-full bg-orange-500 px-5 py-2.5 text-base font-semibold text-white transition-all duration-150 hover:bg-orange-400 active:bg-orange-600"
+            className="shrink-0 rounded-full bg-orange-500 px-4 py-2 text-sm font-semibold text-white transition-all duration-150 hover:bg-orange-400 active:bg-orange-600 sm:px-5 sm:py-2.5 sm:text-base"
           >
             Reset
           </button>
         ) : (
           <button
             onClick={onStart}
-            className="shrink-0 rounded-full bg-green-600 px-5 py-2.5 text-base font-semibold text-white transition-all duration-150 hover:bg-green-500 active:bg-green-700"
+            className="shrink-0 rounded-full bg-green-600 px-4 py-2 text-sm font-semibold text-white transition-all duration-150 hover:bg-green-500 active:bg-green-700 sm:px-5 sm:py-2.5 sm:text-base"
           >
             Start
           </button>
         )}
         <button
           onClick={onRemove}
-          className="shrink-0 rounded-full bg-red-500 px-4 py-2.5 text-base font-semibold text-white transition-all duration-150 hover:bg-red-400 active:bg-red-600"
+          className="shrink-0 rounded-full bg-red-500 px-3 py-2 text-sm font-semibold text-white transition-all duration-150 hover:bg-red-400 active:bg-red-600 sm:px-4 sm:py-2.5 sm:text-base"
         >
           Remove
         </button>
