@@ -117,6 +117,12 @@ the same cases against it and prints latency percentiles for comparison.
 
 Deployed at https://topics.esteban.site (custom domain; https://table-topics-ai.stban.workers.dev stays as fallback).
 
+Analytics: Cloudflare Web Analytics beacon in `frontend/index.html` using the
+esteban.site zone's site token (the zone's auto-injection does not reach
+Worker-served HTML). Dashboard: Cloudflare → Analytics & Logs → Web Analytics
+→ esteban.site, filter by host `topics.esteban.site`. Workers observability
+(request logs) is enabled in `wrangler.jsonc`.
+
 ## Jev notes (from docs.typesafe.ai)
 
 - Request: `{ model, state, questions }`; state can be a string, object or
