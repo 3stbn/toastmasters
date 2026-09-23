@@ -1,0 +1,27 @@
+{
+  "name": "table-topics-ai-api",
+  "type": "module",
+  "scripts": {
+    "cf": "sh scripts/wrangler.sh",
+    "dev": "sh scripts/wrangler.sh dev --port 8787",
+    "deploy": "sh scripts/wrangler.sh deploy --minify",
+    "lint": "tsc --noEmit",
+    "gen-types": "sh scripts/wrangler.sh types src/env.d.ts",
+    "eval": "tsx scripts/eval.ts",
+    "content:slides": "tsx scripts/fetch-slides.ts",
+    "content:music": "tsx scripts/fetch-music.ts"
+  },
+  "dependencies": {
+    "@hono/zod-openapi": "^0.19.2",
+    "hono": "^4.7.5",
+    "typescript": "^5.9.3",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20250327.0",
+    "@types/node": "^22.13.13",
+    "tsx": "^4.20.6",
+    "wrangler": "^4.6.0"
+  },
+  "packageManager": "pnpm@10.11.0"
+}

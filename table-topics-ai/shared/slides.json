@@ -1,0 +1,992 @@
+[
+  {
+    "id": "astronauta",
+    "caption": "Un astronauta en la Luna",
+    "description": "An astronaut walking on the surface of the Moon",
+    "file": "astronauta.jpg",
+    "width": 1280,
+    "height": 1280,
+    "credit": {
+      "title": "Aldrin Apollo 11.jpg",
+      "artist": "Neil A. Armstrong",
+      "license": "Public domain",
+      "url": "https://commons.wikimedia.org/wiki/File:Aldrin_Apollo_11.jpg"
+    },
+    "pick": 0
+  },
+  {
+    "id": "titanic",
+    "caption": "El Titanic hundiéndose",
+    "description": "The Titanic sinking in the ocean at night",
+    "file": "titanic.jpg",
+    "width": 1280,
+    "height": 720,
+    "credit": {
+      "title": "Titanic sinking, painting by Willy Stöwer.jpg",
+      "artist": "Willy Stöwer",
+      "license": "Public domain",
+      "url": "https://commons.wikimedia.org/wiki/File:Titanic_sinking,_painting_by_Willy_St%C3%B6wer.jpg"
+    },
+    "pick": 1
+  },
+  {
+    "id": "mapache",
+    "caption": "Un mapache saqueando la basura",
+    "description": "A raccoon raiding a garbage bin",
+    "file": "mapache.jpg",
+    "width": 1280,
+    "height": 851,
+    "credit": {
+      "title": "365 084 Raccoon.jpg",
+      "artist": "Canned Muffins",
+      "license": "CC BY 2.0",
+      "url": "https://commons.wikimedia.org/wiki/File:365_084_Raccoon.jpg"
+    },
+    "pick": 0
+  },
+  {
+    "id": "atasco",
+    "caption": "Un atasco monumental",
+    "description": "A massive traffic jam on a highway",
+    "file": "atasco.jpg",
+    "width": 1280,
+    "height": 853,
+    "credit": {
+      "title": "Traffic jam after massive car accident at D1 highway at March 2018.jpg",
+      "artist": "Jiří Sedláček",
+      "license": "CC BY-SA 4.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Traffic_jam_after_massive_car_accident_at_D1_highway_at_March_2018.jpg"
+    },
+    "pick": 0
+  },
+  {
+    "id": "pizza",
+    "caption": "Una pizza recién hecha",
+    "description": "A freshly baked pizza",
+    "file": "pizza.jpg",
+    "width": 1280,
+    "height": 960,
+    "credit": {
+      "title": "Margherita Originale.JPG",
+      "artist": "Mario56",
+      "license": "CC BY-SA 3.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Margherita_Originale.JPG"
+    },
+    "pick": 0
+  },
+  {
+    "id": "dinosaurio",
+    "caption": "Un esqueleto de dinosaurio",
+    "description": "A T. rex skeleton in a museum",
+    "file": "dinosaurio.jpg",
+    "width": 1280,
+    "height": 587,
+    "credit": {
+      "title": "Tyrannosaurus, restoration and model of the skeleton. Bulletin of the AMNH, v. 32, article 4 (plate 4).jpg",
+      "artist": "Osborn, Henry Fairfield, 1857-1935. Brown, Barnum.",
+      "license": "Public domain",
+      "url": "https://commons.wikimedia.org/wiki/File:Tyrannosaurus,_restoration_and_model_of_the_skeleton._Bulletin_of_the_AMNH,_v._32,_article_4_(plate_4).jpg"
+    },
+    "pick": 2
+  },
+  {
+    "id": "paloma",
+    "caption": "Una paloma con cara de pocos amigos",
+    "description": "A close-up of a pigeon with a grumpy look",
+    "file": "paloma.jpg",
+    "width": 1280,
+    "height": 960,
+    "credit": {
+      "title": "Close-up picture of a common wood pigeon.jpg",
+      "artist": "alexislours",
+      "license": "CC BY 2.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Close-up_picture_of_a_common_wood_pigeon.jpg"
+    },
+    "pick": 0
+  },
+  {
+    "id": "patito",
+    "caption": "Un patito de goma",
+    "description": "A yellow rubber duck",
+    "file": "patito.jpg",
+    "width": 1280,
+    "height": 964,
+    "credit": {
+      "title": "Yellow Rubber Duck.jpg",
+      "artist": "RandomPerson238",
+      "license": "CC BY-SA 4.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Yellow_Rubber_Duck.jpg"
+    },
+    "pick": 0
+  },
+  {
+    "id": "perezoso",
+    "caption": "Un perezoso, sin prisa",
+    "description": "A sloth hanging lazily from a tree",
+    "file": "perezoso.jpg",
+    "width": 1280,
+    "height": 858,
+    "credit": {
+      "title": "Two-toed sloth hanging from tree - DPLA - 8b5710363d8e29107ad3ad03c77a21ee.jpg",
+      "artist": "Garst, Warren, 1922-2016, photographer",
+      "license": "CC BY-SA 4.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Two-toed_sloth_hanging_from_tree_-_DPLA_-_8b5710363d8e29107ad3ad03c77a21ee.jpg"
+    },
+    "pick": 0
+  },
+  {
+    "id": "montana-rusa",
+    "caption": "Una montaña rusa en pleno looping",
+    "description": "A roller coaster doing a loop",
+    "file": "montana-rusa.jpg",
+    "width": 1280,
+    "height": 960,
+    "credit": {
+      "title": "Loop Coaster MOMOnGA - Yomiuriland.jpg",
+      "artist": "Jeremy Thompson",
+      "license": "CC BY 2.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Loop_Coaster_MOMOnGA_-_Yomiuriland.jpg"
+    },
+    "pick": 1
+  },
+  {
+    "id": "dentista",
+    "caption": "El sillón del dentista",
+    "description": "A dentist's chair in a clinic",
+    "file": "dentista.jpg",
+    "width": 1280,
+    "height": 960,
+    "credit": {
+      "title": "A dental chair in a dentist clinic in North Carolina, United States.jpg",
+      "artist": "Harrison Keely",
+      "license": "CC BY 4.0",
+      "url": "https://commons.wikimedia.org/wiki/File:A_dental_chair_in_a_dentist_clinic_in_North_Carolina,_United_States.jpg"
+    },
+    "pick": 0
+  },
+  {
+    "id": "rueda",
+    "caption": "Una rueda pinchada",
+    "description": "A car with a flat tire",
+    "file": "rueda.jpg",
+    "width": 1280,
+    "height": 854,
+    "credit": {
+      "title": "Project 366 -188 060724 Feeling Flat (53839732221).jpg",
+      "artist": "Pete from Liverpool, UK",
+      "license": "CC0",
+      "url": "https://commons.wikimedia.org/wiki/File:Project_366_-188_060724_Feeling_Flat_(53839732221).jpg"
+    },
+    "pick": 0
+  },
+  {
+    "id": "tarta",
+    "caption": "Una tarta de boda gigante",
+    "description": "A giant multi-tier wedding cake",
+    "file": "tarta.jpg",
+    "width": 1280,
+    "height": 853,
+    "credit": {
+      "title": "Wedding Cake 2 tier w Swiss butter cream and 90 fresh white cream roses (14574314081).jpg",
+      "artist": "Rexness",
+      "license": "CC BY-SA 2.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Wedding_Cake_2_tier_w_Swiss_butter_cream_and_90_fresh_white_cream_roses_(14574314081).jpg"
+    },
+    "pick": 0
+  },
+  {
+    "id": "calabaza",
+    "caption": "Una calabaza gigante de concurso",
+    "description": "A giant pumpkin at a competition",
+    "file": "calabaza.jpg",
+    "width": 1280,
+    "height": 960,
+    "credit": {
+      "title": "Giant Pumpkin Contest- Mishicot, WI - Flickr - MichaelSteeber.jpg",
+      "artist": "Michael Steeber from USA",
+      "license": "CC BY-SA 2.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Giant_Pumpkin_Contest-_Mishicot,_WI_-_Flickr_-_MichaelSteeber.jpg"
+    },
+    "pick": 0
+  },
+  {
+    "id": "sumo",
+    "caption": "Dos luchadores de sumo",
+    "description": "Two sumo wrestlers in a bout",
+    "file": "sumo.jpg",
+    "width": 1280,
+    "height": 905,
+    "credit": {
+      "title": "Sumo wrestlers 2010-01-14.jpg",
+      "artist": "davidgsteadman",
+      "license": "Public domain",
+      "url": "https://commons.wikimedia.org/wiki/File:Sumo_wrestlers_2010-01-14.jpg"
+    },
+    "pick": 0
+  },
+  {
+    "id": "pinguinos",
+    "caption": "Una colonia de pingüinos",
+    "description": "A colony of emperor penguins",
+    "file": "pinguinos.jpg",
+    "width": 1280,
+    "height": 853,
+    "credit": {
+      "title": "Colony of King Penguins at Kelly Tarlton's.jpg",
+      "artist": "Pseudopanax at English Wikipedia",
+      "license": "Public domain",
+      "url": "https://commons.wikimedia.org/wiki/File:Colony_of_King_Penguins_at_Kelly_Tarlton%27s.jpg"
+    },
+    "pick": 0
+  },
+  {
+    "id": "opera",
+    "caption": "Un cantante de ópera en pleno aria",
+    "description": "An opera singer performing dramatically on stage",
+    "file": "opera.jpg",
+    "width": 1280,
+    "height": 960,
+    "credit": {
+      "title": "Denislava-Staneva-Opera-Singer-at-opera-stage-Boris-Hristov-15-12-2016.jpg",
+      "artist": "Stoyan_ik",
+      "license": "CC BY-SA 4.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Denislava-Staneva-Opera-Singer-at-opera-stage-Boris-Hristov-15-12-2016.jpg"
+    },
+    "pick": 0
+  },
+  {
+    "id": "coliseo",
+    "caption": "El Coliseo de Roma",
+    "description": "The Colosseum in Rome",
+    "file": "coliseo.jpg",
+    "width": 1280,
+    "height": 831,
+    "credit": {
+      "title": "Deambulatoire Colosseum Rome Italy.jpg",
+      "artist": "Jebulon",
+      "license": "CC0",
+      "url": "https://commons.wikimedia.org/wiki/File:Deambulatoire_Colosseum_Rome_Italy.jpg"
+    },
+    "pick": 1
+  },
+  {
+    "id": "volcan",
+    "caption": "Un volcán en erupción",
+    "description": "A volcano erupting with lava",
+    "file": "volcan.jpg",
+    "width": 1280,
+    "height": 961,
+    "credit": {
+      "title": "Kīlauea - Volcano eruption.jpg",
+      "artist": "Domino721",
+      "license": "CC BY-SA 4.0",
+      "url": "https://commons.wikimedia.org/wiki/File:K%C4%ABlauea_-_Volcano_eruption.jpg"
+    },
+    "pick": 2
+  },
+  {
+    "id": "lavanderia",
+    "caption": "Una lavandería de barrio",
+    "description": "A laundromat with rows of washing machines",
+    "file": "lavanderia.jpg",
+    "width": 1280,
+    "height": 960,
+    "credit": {
+      "title": "Laundromat Washing Machines & Laundry Equipment.jpg",
+      "artist": "ArtOfHappiness",
+      "license": "CC BY-SA 4.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Laundromat_Washing_Machines_%26_Laundry_Equipment.jpg"
+    },
+    "pick": 0
+  },
+  {
+    "id": "cola",
+    "caption": "Una cola interminable",
+    "description": "A very long queue of people waiting",
+    "file": "cola.jpg",
+    "width": 1280,
+    "height": 799,
+    "credit": {
+      "title": "The administration wants peopel to take the vaccine as soon as possibal. but the lack of vaccines at hte vaccination centres is delaying the process people are waiting in long queues for their turnes.jpg",
+      "artist": "Prashant Kharote",
+      "license": "CC BY-SA 4.0",
+      "url": "https://commons.wikimedia.org/wiki/File:The_administration_wants_peopel_to_take_the_vaccine_as_soon_as_possibal._but_the_lack_of_vaccines_at_hte_vaccination_centres_is_delaying_the_process_people_are_waiting_in_long_queues_for_their_turnes.jpg"
+    },
+    "pick": 1
+  },
+  {
+    "id": "ordenador",
+    "caption": "Un ordenador de los años 80",
+    "description": "A 1980s personal computer",
+    "file": "ordenador.jpg",
+    "width": 1280,
+    "height": 960,
+    "credit": {
+      "title": "Mch2022-computermuseum-corona.jpg",
+      "artist": "Korrupt",
+      "license": "CC BY-SA 4.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Mch2022-computermuseum-corona.jpg"
+    },
+    "pick": 0
+  },
+  {
+    "id": "cabras",
+    "caption": "Cabras subidas a un árbol",
+    "description": "Goats standing in the branches of a tree",
+    "file": "cabras.jpg",
+    "width": 1280,
+    "height": 850,
+    "credit": {
+      "title": "Goats in an argan tree Morocco.jpg",
+      "artist": "Elena Tatiana Chis",
+      "license": "CC BY-SA 4.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Goats_in_an_argan_tree_Morocco.jpg"
+    },
+    "pick": 0
+  },
+  {
+    "id": "flamenco",
+    "caption": "Un flamenco a la pata coja",
+    "description": "A flamingo standing on one leg",
+    "file": "flamenco.jpg",
+    "width": 1280,
+    "height": 960,
+    "credit": {
+      "title": "Greater Flamingo Feeding One Leg Pallikaranai Apr22 D72 23469.jpg",
+      "artist": "This Photo was taken by Timothy A. Gonsalves. Feel free to use my photos, but please mention me as the author. I would much appreciate if you send me an email tagooty@yahoo.com or write on my talk page, for my information. Please contact me before commercial use. Please do not upload an edited image here without consulting me. I would like to make corrections only at my own source to ensure that the changes improve the image and are preserved.Otherwise you may upload an edited image with a new name. Please use one of the templates derivative or extract.",
+      "license": "CC BY-SA 4.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Greater_Flamingo_Feeding_One_Leg_Pallikaranai_Apr22_D72_23469.jpg"
+    },
+    "pick": 0
+  },
+  {
+    "id": "nieve",
+    "caption": "Un muñeco de nieve",
+    "description": "A snowman in winter",
+    "file": "nieve.jpg",
+    "width": 1280,
+    "height": 960,
+    "credit": {
+      "title": "Winter snowman in the street.jpg",
+      "artist": "Peachyeung316",
+      "license": "CC BY-SA 4.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Winter_snowman_in_the_street.jpg"
+    },
+    "pick": 0
+  },
+  {
+    "id": "ajedrez",
+    "caption": "Una partida de ajedrez",
+    "description": "A chess board mid-game",
+    "file": "ajedrez.jpg",
+    "width": 1280,
+    "height": 840,
+    "credit": {
+      "title": "Chess game Staunton No. 6 perfil view 8.jpg",
+      "artist": "Wilfredor",
+      "license": "CC0",
+      "url": "https://commons.wikimedia.org/wiki/File:Chess_game_Staunton_No._6_perfil_view_8.jpg"
+    },
+    "pick": 0
+  },
+  {
+    "id": "papeleo",
+    "caption": "Una montaña de papeleo",
+    "description": "A huge stack of paperwork and forms",
+    "file": "papeleo.jpg",
+    "width": 1280,
+    "height": 960,
+    "credit": {
+      "title": "Legal Contract & Signature - Warm Tones.jpg",
+      "artist": "Blogtrepreneur",
+      "license": "CC BY 2.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Legal_Contract_%26_Signature_-_Warm_Tones.jpg"
+    },
+    "pick": 0
+  },
+  {
+    "id": "cactus",
+    "caption": "Un cactus en el desierto",
+    "description": "A tall cactus in the desert",
+    "file": "cactus.jpg",
+    "width": 1280,
+    "height": 960,
+    "credit": {
+      "title": "Desert Cactus at Saguaro NP in AZ 3.jpg",
+      "artist": "Jeffhollett",
+      "license": "CC BY-SA 4.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Desert_Cactus_at_Saguaro_NP_in_AZ_3.jpg"
+    },
+    "pick": 5
+  },
+  {
+    "id": "papel",
+    "caption": "Rollos de papel higiénico",
+    "description": "A stack of toilet paper rolls",
+    "file": "papel.jpg",
+    "width": 1280,
+    "height": 960,
+    "credit": {
+      "title": "Chained rolls of toilet paper at MBTA Sullivan station bathrooms.jpg",
+      "artist": "4300streetcar",
+      "license": "CC BY 4.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Chained_rolls_of_toilet_paper_at_MBTA_Sullivan_station_bathrooms.jpg"
+    },
+    "pick": 0
+  },
+  {
+    "id": "pirata",
+    "caption": "Un barco pirata",
+    "description": "A pirate ship under sail",
+    "file": "pirata.jpg",
+    "width": 1280,
+    "height": 960,
+    "credit": {
+      "title": "Sailing Boat Santa Bernarda Caravelo, River Arade, Portimão.jpg",
+      "artist": "Ron B. Thomson",
+      "license": "Public domain",
+      "url": "https://commons.wikimedia.org/wiki/File:Sailing_Boat_Santa_Bernarda_Caravelo,_River_Arade,_Portim%C3%A3o.jpg"
+    },
+    "pick": 0
+  },
+  {
+    "id": "hamster",
+    "caption": "Un hámster en su rueda",
+    "description": "A hamster running in a wheel",
+    "file": "hamster.jpg",
+    "width": 1280,
+    "height": 960,
+    "credit": {
+      "title": "Hamster standing in exercise wheel.jpg",
+      "artist": "Rlicul",
+      "license": "CC BY-SA 3.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Hamster_standing_in_exercise_wheel.jpg"
+    },
+    "pick": 0
+  },
+  {
+    "id": "playa",
+    "caption": "Un atardecer en el paraíso",
+    "description": "A tropical beach at sunset with palm trees",
+    "file": "playa.jpg",
+    "width": 1280,
+    "height": 853,
+    "credit": {
+      "title": "Koh Mak (island), Thailand, Sunset on the beach with palms.jpg",
+      "artist": "Vyacheslav Argenberg",
+      "license": "CC BY 4.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Koh_Mak_(island),_Thailand,_Sunset_on_the_beach_with_palms.jpg"
+    },
+    "pick": 0
+  },
+  {
+    "id": "carrito",
+    "caption": "Un carrito de súper abandonado",
+    "description": "An abandoned shopping cart",
+    "file": "carrito.jpg",
+    "width": 1280,
+    "height": 853,
+    "credit": {
+      "title": "Abandoned shopping cart in Rotterdam.jpg",
+      "artist": "trougnouf",
+      "license": "CC BY 4.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Abandoned_shopping_cart_in_Rotterdam.jpg"
+    },
+    "pick": 0
+  },
+  {
+    "id": "mosquito",
+    "caption": "Un mosquito, de cerca",
+    "description": "A close-up of a mosquito",
+    "file": "mosquito.jpg",
+    "width": 1280,
+    "height": 1014,
+    "credit": {
+      "title": "Aedes aegypti biting human.jpg",
+      "artist": "Original author: US Department of Agriculture; then denoised rescaled, enhanced with adaptive denoising filters and minimal resharpening, then unscaled to original resolution, for easier refitting at various resolutions.",
+      "license": "Public domain",
+      "url": "https://commons.wikimedia.org/wiki/File:Aedes_aegypti_biting_human.jpg"
+    },
+    "pick": 0
+  },
+  {
+    "id": "autobus",
+    "caption": "Un autobús escolar",
+    "description": "A yellow school bus",
+    "file": "autobus.jpg",
+    "width": 1280,
+    "height": 720,
+    "credit": {
+      "title": "Ouachita Parish Schools school bus at Swartz Elementary.jpeg",
+      "artist": "Ktkvtsh",
+      "license": "CC BY-SA 4.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Ouachita_Parish_Schools_school_bus_at_Swartz_Elementary.jpeg"
+    },
+    "pick": 0
+  },
+  {
+    "id": "cocodrilo",
+    "caption": "Un cocodrilo con la boca abierta",
+    "description": "A crocodile with its mouth wide open",
+    "file": "cocodrilo.jpg",
+    "width": 1280,
+    "height": 640,
+    "credit": {
+      "title": "Mugger crocodile (Crocodylus palustris) Gal Oya.jpg",
+      "artist": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Mugger_crocodile_(Crocodylus_palustris)_Gal_Oya.jpg"
+    },
+    "pick": 0
+  },
+  {
+    "id": "perro-gafas",
+    "caption": "Un perro con gafas de sol",
+    "description": "A dog wearing sunglasses",
+    "file": "perro-gafas.jpg",
+    "width": 1280,
+    "height": 960,
+    "credit": {
+      "title": "Coco the beagle wearing sunglasses.jpg",
+      "artist": "Slyronit",
+      "license": "CC BY-SA 4.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Coco_the_beagle_wearing_sunglasses.jpg"
+    },
+    "pick": 1
+  },
+  {
+    "id": "ascensor",
+    "caption": "Los botones de un ascensor",
+    "description": "An elevator button panel",
+    "file": "ascensor.jpg",
+    "width": 1280,
+    "height": 574,
+    "credit": {
+      "title": "Dual elevator door buttons - cropped.jpg",
+      "artist": "Nils R. Barth",
+      "license": "CC0",
+      "url": "https://commons.wikimedia.org/wiki/File:Dual_elevator_door_buttons_-_cropped.jpg"
+    },
+    "pick": 6
+  },
+  {
+    "id": "cohete",
+    "caption": "El lanzamiento de un cohete",
+    "description": "A rocket launching into space",
+    "file": "cohete.jpg",
+    "width": 1280,
+    "height": 1280,
+    "credit": {
+      "title": "Space Shuttle Columbia launching.jpg",
+      "artist": "NASA",
+      "license": "Public domain",
+      "url": "https://commons.wikimedia.org/wiki/File:Space_Shuttle_Columbia_launching.jpg"
+    },
+    "pick": 0
+  },
+  {
+    "id": "lluvia",
+    "caption": "Una parada de autobús bajo la lluvia",
+    "description": "People waiting at a bus stop in the rain",
+    "file": "lluvia.jpg",
+    "width": 1280,
+    "height": 1071,
+    "credit": {
+      "title": "People with umbrellas in the United Kingdom.jpg",
+      "artist": "StephenWright",
+      "license": "CC BY-SA 3.0",
+      "url": "https://commons.wikimedia.org/wiki/File:People_with_umbrellas_in_the_United_Kingdom.jpg"
+    },
+    "pick": 0
+  },
+  {
+    "id": "espagueti",
+    "caption": "Un plato de espaguetis",
+    "description": "A plate of spaghetti",
+    "file": "espagueti.jpg",
+    "width": 1280,
+    "height": 1280,
+    "credit": {
+      "title": "Liat Portal for Foodie Disorder - Spaghetti bolognese with peas.jpg",
+      "artist": "HaJunkiyada",
+      "license": "CC BY-SA 4.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Liat_Portal_for_Foodie_Disorder_-_Spaghetti_bolognese_with_peas.jpg"
+    },
+    "pick": 1
+  },
+  {
+    "id": "barbero",
+    "caption": "En la barbería",
+    "description": "A barber cutting a customer's hair",
+    "file": "barbero.jpg",
+    "width": 1280,
+    "height": 854,
+    "credit": {
+      "title": "Barber cutting hair with comb. Back view of man in barber shop.jpg",
+      "artist": "Nenad Stojkovic",
+      "license": "CC BY 2.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Barber_cutting_hair_with_comb._Back_view_of_man_in_barber_shop.jpg"
+    },
+    "pick": 1
+  },
+  {
+    "id": "bomberos",
+    "caption": "Un camión de bomberos",
+    "description": "A red fire truck",
+    "file": "bomberos.jpg",
+    "width": 1280,
+    "height": 961,
+    "credit": {
+      "title": "Vintage Red Fire Truck Display.jpg",
+      "artist": "QueenCityCebu",
+      "license": "CC BY-SA 4.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Vintage_Red_Fire_Truck_Display.jpg"
+    },
+    "pick": 1
+  },
+  {
+    "id": "morsa",
+    "caption": "Una morsa",
+    "description": "A walrus with big tusks",
+    "file": "morsa.jpg",
+    "width": 1280,
+    "height": 960,
+    "credit": {
+      "title": "Walrus (Odobenus rosmarus) on Svalbard.jpg",
+      "artist": "AWeith",
+      "license": "CC BY-SA 4.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Walrus_(Odobenus_rosmarus)_on_Svalbard.jpg"
+    },
+    "pick": 0
+  },
+  {
+    "id": "helado",
+    "caption": "Un helado caído al suelo",
+    "description": "An ice cream cone dropped on the ground",
+    "file": "helado.jpg",
+    "width": 1280,
+    "height": 853,
+    "credit": {
+      "title": "Fallen-ice cream-cone.JPG",
+      "artist": "Tamorlan",
+      "license": "CC BY 3.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Fallen-ice_cream-cone.JPG"
+    },
+    "pick": 0
+  },
+  {
+    "id": "maraton",
+    "caption": "Corredores de maratón",
+    "description": "A crowd of marathon runners",
+    "file": "maraton.jpg",
+    "width": 1280,
+    "height": 960,
+    "credit": {
+      "title": "2007INGTaipeiMarathon Starting EliteRunners.jpg",
+      "artist": "Rico Shen",
+      "license": "CC BY-SA 4.0",
+      "url": "https://commons.wikimedia.org/wiki/File:2007INGTaipeiMarathon_Starting_EliteRunners.jpg"
+    },
+    "pick": 1
+  },
+  {
+    "id": "desguace",
+    "caption": "Un desguace de coches",
+    "description": "A junkyard full of wrecked cars",
+    "file": "desguace.jpg",
+    "width": 1280,
+    "height": 865,
+    "credit": {
+      "title": "STACKED CARS IN CITY JUNKYARD WILL BE USED FOR SCRAP - NARA - 552738.jpg",
+      "artist": "Dick Swanson",
+      "license": "Public domain",
+      "url": "https://commons.wikimedia.org/wiki/File:STACKED_CARS_IN_CITY_JUNKYARD_WILL_BE_USED_FOR_SCRAP_-_NARA_-_552738.jpg"
+    },
+    "pick": 0
+  },
+  {
+    "id": "globos",
+    "caption": "Globos aerostáticos",
+    "description": "Hot air balloons at a festival",
+    "file": "globos.jpg",
+    "width": 1280,
+    "height": 820,
+    "credit": {
+      "title": "Leon hot air balloon festival 2010.jpg",
+      "artist": "Tomas Castelazo",
+      "license": "CC BY-SA 3.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Leon_hot_air_balloon_festival_2010.jpg"
+    },
+    "pick": 0
+  },
+  {
+    "id": "sushi",
+    "caption": "Una bandeja de sushi",
+    "description": "A platter of sushi",
+    "file": "sushi.jpg",
+    "width": 1280,
+    "height": 720,
+    "credit": {
+      "title": "Sushi platter, Nikko, Japan.jpg",
+      "artist": "Joli Rumi",
+      "license": "CC BY-SA 4.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Sushi_platter,_Nikko,_Japan.jpg"
+    },
+    "pick": 0
+  },
+  {
+    "id": "tiburon",
+    "caption": "Un tiburón blanco",
+    "description": "A great white shark",
+    "file": "tiburon.jpg",
+    "width": 1280,
+    "height": 891,
+    "credit": {
+      "title": "White shark.jpg",
+      "artist": "Pterantula (Terry Goss) at en.wikipedia",
+      "license": "CC BY 2.5",
+      "url": "https://commons.wikimedia.org/wiki/File:White_shark.jpg"
+    },
+    "pick": 0
+  },
+  {
+    "id": "camellos",
+    "caption": "Camellos en el desierto",
+    "description": "A camel caravan crossing desert dunes",
+    "file": "camellos.jpg",
+    "width": 1280,
+    "height": 837,
+    "credit": {
+      "title": "ASC Leiden - van Achterberg Collection - 11 - 30 - A man in blue is leading a caravan of dromedaries in the desert - Morocco - 1990s.jpg",
+      "artist": "desconocido",
+      "license": "CC BY-SA 4.0",
+      "url": "https://commons.wikimedia.org/wiki/File:ASC_Leiden_-_van_Achterberg_Collection_-_11_-_30_-_A_man_in_blue_is_leading_a_caravan_of_dromedaries_in_the_desert_-_Morocco_-_1990s.jpg"
+    },
+    "pick": 1
+  },
+  {
+    "id": "escaleras",
+    "caption": "Unas escaleras mecánicas",
+    "description": "Escalators in a shopping mall",
+    "file": "escaleras.jpg",
+    "width": 1280,
+    "height": 960,
+    "credit": {
+      "title": "HK KCD 啟德 Kai Tak AIRSIDE Shopping Mall void escalators July 2024 R12S 01.jpg",
+      "artist": "SUNWHEAIW Shengaou",
+      "license": "CC0",
+      "url": "https://commons.wikimedia.org/wiki/File:HK_KCD_%E5%95%9F%E5%BE%B7_Kai_Tak_AIRSIDE_Shopping_Mall_void_escalators_July_2024_R12S_01.jpg"
+    },
+    "pick": 5
+  },
+  {
+    "id": "jubilados",
+    "caption": "Una pareja de jubilados bailando",
+    "description": "An elderly couple dancing",
+    "file": "jubilados.jpg",
+    "width": 1280,
+    "height": 1197,
+    "credit": {
+      "title": "Living the Tradition. Love and Folklore.jpg",
+      "artist": "Nagibina.photo.art",
+      "license": "CC BY-SA 4.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Living_the_Tradition._Love_and_Folklore.jpg"
+    },
+    "pick": 1
+  },
+  {
+    "id": "tractor",
+    "caption": "Un tractor",
+    "description": "A tractor in a farm field",
+    "file": "tractor.jpg",
+    "width": 1280,
+    "height": 1207,
+    "credit": {
+      "title": "Field-Marshall tractor, Cophill Farm vintage rally 2012.jpg",
+      "artist": "Andy Dingley",
+      "license": "CC BY-SA 3.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Field-Marshall_tractor,_Cophill_Farm_vintage_rally_2012.jpg"
+    },
+    "pick": 0
+  },
+  {
+    "id": "cerdo",
+    "caption": "Un cerdo feliz en el barro",
+    "description": "A pig wallowing happily in mud",
+    "file": "cerdo.jpg",
+    "width": 1280,
+    "height": 1280,
+    "credit": {
+      "title": "Yorkshire pigs at animal sanctuary.jpg",
+      "artist": "Mark Peters from Baltimore, USA",
+      "license": "CC BY 2.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Yorkshire_pigs_at_animal_sanctuary.jpg"
+    },
+    "pick": 2
+  },
+  {
+    "id": "tortuga",
+    "caption": "Una tortuga gigante",
+    "description": "A giant tortoise",
+    "file": "tortuga.jpg",
+    "width": 1280,
+    "height": 1280,
+    "credit": {
+      "title": "Galápagos giant tortoise, head profile (Chelonoidis niger hoodensis).jpg",
+      "artist": "E bailey",
+      "license": "CC BY-SA 4.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Gal%C3%A1pagos_giant_tortoise,_head_profile_(Chelonoidis_niger_hoodensis).jpg"
+    },
+    "pick": 0
+  },
+  {
+    "id": "karaoke",
+    "caption": "Noche de karaoke",
+    "description": "Someone singing karaoke with a microphone",
+    "file": "karaoke.jpg",
+    "width": 1280,
+    "height": 857,
+    "credit": {
+      "title": "Karaoke Star! (4917447111).jpg",
+      "artist": "Derek Gavey from Medicine Hat, Canada",
+      "license": "CC BY 2.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Karaoke_Star!_(4917447111).jpg"
+    },
+    "pick": 0
+  },
+  {
+    "id": "bano-portatil",
+    "caption": "Baños portátiles de festival",
+    "description": "A row of portable toilets at a festival",
+    "file": "bano-portatil.jpg",
+    "width": 1280,
+    "height": 728,
+    "credit": {
+      "title": "Row of portable toilets Israel.jpg",
+      "artist": "desconocido",
+      "license": "CC BY-SA 4.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Row_of_portable_toilets_Israel.jpg"
+    },
+    "pick": 1
+  },
+  {
+    "id": "pato-patos",
+    "caption": "Una familia de patos",
+    "description": "Ducklings following their mother in a line",
+    "file": "pato-patos.jpg",
+    "width": 1280,
+    "height": 949,
+    "credit": {
+      "title": "Mother duck and ducklings - geograph.org.uk - 6905122.jpg",
+      "artist": "Neil Theasby",
+      "license": "CC BY-SA 2.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Mother_duck_and_ducklings_-_geograph.org.uk_-_6905122.jpg"
+    },
+    "pick": 0
+  },
+  {
+    "id": "banana",
+    "caption": "Una piel de plátano en el suelo",
+    "description": "A banana peel on the floor",
+    "file": "banana.jpg",
+    "width": 1280,
+    "height": 853,
+    "credit": {
+      "title": "Banana peel on the ground.jpg",
+      "artist": "Vladiator360",
+      "license": "CC BY-SA 4.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Banana_peel_on_the_ground.jpg"
+    },
+    "pick": 0
+  },
+  {
+    "id": "avion-cabina",
+    "caption": "La cabina de un avión",
+    "description": "A crowded economy-class airplane cabin",
+    "file": "avion-cabina.jpg",
+    "width": 1280,
+    "height": 857,
+    "credit": {
+      "title": "Passenger cabin, Air Hokkaido Twin Otter.jpg",
+      "artist": "Hideyuki KAMON from Takarazuka / 宝塚市, Hyogo / 兵庫県, Japan / 日本",
+      "license": "CC BY-SA 2.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Passenger_cabin,_Air_Hokkaido_Twin_Otter.jpg"
+    },
+    "pick": 0
+  },
+  {
+    "id": "gimnasio",
+    "caption": "Un gimnasio",
+    "description": "A gym with racks of dumbbells",
+    "file": "gimnasio.jpg",
+    "width": 1280,
+    "height": 853,
+    "credit": {
+      "title": "Marines' voices echo, prompt new gym hours 150927-M-AI083-067.jpg",
+      "artist": "Lance Cpl. Jason Jimenez",
+      "license": "Public domain",
+      "url": "https://commons.wikimedia.org/wiki/File:Marines%27_voices_echo,_prompt_new_gym_hours_150927-M-AI083-067.jpg"
+    },
+    "pick": 1
+  },
+  {
+    "id": "boda",
+    "caption": "Una boda",
+    "description": "A couple at their wedding ceremony",
+    "file": "boda.jpg",
+    "width": 1280,
+    "height": 852,
+    "credit": {
+      "title": "Couple at a wedding ceremony in Indonesia.jpg",
+      "artist": "Maxinick11",
+      "license": "CC BY-SA 4.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Couple_at_a_wedding_ceremony_in_Indonesia.jpg"
+    },
+    "pick": 0
+  },
+  {
+    "id": "examen",
+    "caption": "Un examen",
+    "description": "Students taking an exam in a big hall",
+    "file": "examen.jpg",
+    "width": 1280,
+    "height": 1280,
+    "credit": {
+      "title": "Lakeside University College, Students in Exams Hall.jpg",
+      "artist": "Asaalah1",
+      "license": "CC BY 4.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Lakeside_University_College,_Students_in_Exams_Hall.jpg"
+    },
+    "pick": 0
+  },
+  {
+    "id": "pulpo",
+    "caption": "Un pulpo",
+    "description": "An octopus underwater",
+    "file": "pulpo.jpg",
+    "width": 1280,
+    "height": 1280,
+    "credit": {
+      "title": "Pulpo común (Octopus vulgaris), Parque natural de la Arrábida, Portugal, 2020-07-21, DD 33.jpg",
+      "artist": "Diego Delso",
+      "license": "CC BY-SA 4.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Pulpo_com%C3%BAn_(Octopus_vulgaris),_Parque_natural_de_la_Arr%C3%A1bida,_Portugal,_2020-07-21,_DD_33.jpg"
+    },
+    "pick": 0
+  },
+  {
+    "id": "nube-tormenta",
+    "caption": "Una tormenta eléctrica",
+    "description": "A thunderstorm with lightning over a city",
+    "file": "nube-tormenta.jpg",
+    "width": 1280,
+    "height": 941,
+    "credit": {
+      "title": "Thunderstorm Over the City.jpg",
+      "artist": "NU iGEM",
+      "license": "CC BY 4.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Thunderstorm_Over_the_City.jpg"
+    },
+    "pick": 1
+  }
+]

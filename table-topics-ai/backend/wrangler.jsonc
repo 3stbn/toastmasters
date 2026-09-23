@@ -1,0 +1,38 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "table-topics-ai",
+  "main": "src/app.ts",
+  "compatibility_flags": ["nodejs_compat"],
+  "compatibility_date": "2025-09-01",
+  "assets": {
+    "directory": "../frontend/dist",
+    "not_found_handling": "single-page-application",
+    "run_worker_first": ["/api/*"]
+  },
+  "observability": { "enabled": true, "head_sampling_rate": 1 },
+  // Custom domain on the esteban.site zone (same Cloudflare account). The
+  // first deploy carrying this creates the DNS record and certificate.
+  "routes": [{ "pattern": "topics.esteban.site", "custom_domain": true }],
+  // Adding routes disables workers.dev by default; keep it as a fallback.
+  "workers_dev": true,
+  "preview_urls": true,
+  "vars": {
+    // TypeSafe Jev via OpenRouter (key is the OPENROUTER_KEY secret).
+    "JEV_MODEL": "jev-latest",
+    // Optional second engine: SemIf on Esteban's Mac through a Cloudflare Tunnel
+    // (key is the LOCAL_JEV_KEY secret). Sessions pick it in Ajustes.
+    "LOCAL_JEV_URL": "https://ai.esteban.site/semif/v1",
+    "LOCAL_JEV_MODEL": "Qwen/Qwen3.5-4B"
+  },
+  "durable_objects": {
+    "bindings": [
+      { "name": "SESSIONS", "class_name": "SessionDO" },
+      // One instance ("daily"): caps how many sessions may be created per day.
+      { "name": "QUOTA", "class_name": "QuotaDO" }
+    ]
+  },
+  "migrations": [
+    { "tag": "v1", "new_sqlite_classes": ["SessionDO"] },
+    { "tag": "v2", "new_sqlite_classes": ["QuotaDO"] }
+  ]
+}

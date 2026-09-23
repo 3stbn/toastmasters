@@ -1,0 +1,24 @@
+{
+  "name": "table-topics-ai",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Toastmasters game night: live AI reactions (TypeSafe Jev) to improvised Spanish speeches",
+  "scripts": {
+    "dev": "concurrently -n backend,frontend -c blue,green \"pnpm backend:dev\" \"pnpm frontend:dev\"",
+    "backend:dev": "cd backend && pnpm dev",
+    "frontend:dev": "cd frontend && pnpm dev",
+    "frontend:build": "cd frontend && pnpm build",
+    "deploy": "pnpm frontend:build && pnpm --filter table-topics-ai-api run deploy",
+    "lint": "cd backend && pnpm lint && cd ../frontend && pnpm lint",
+    "eval": "cd backend && pnpm eval",
+    "content:slides": "cd backend && pnpm content:slides",
+    "content:music": "cd backend && pnpm content:music"
+  },
+  "packageManager": "pnpm@10.11.0",
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": ["esbuild", "workerd", "sharp"]
+  }
+}
