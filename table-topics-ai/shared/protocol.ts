@@ -16,7 +16,6 @@ export type ClientAction =
   | { type: "stop" }
   | { type: "reset" }
   | { type: "new_page" }
-  | { type: "turn_around" }
   | { type: "clear_subtitle" }
   | { type: "force_subtitle"; behaviorId?: string; text?: string }
   | { type: "force_mood"; mood: string }

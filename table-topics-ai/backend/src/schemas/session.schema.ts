@@ -38,7 +38,7 @@ export const transcriptBodySchema = z
 
 export const actionBodySchema = z
   .object({
-    type: z.enum(["start", "stop", "reset", "new_page", "turn_around", "clear_subtitle", "force_subtitle", "force_mood", "next_track", "shuffle_topics", "test_sound"]),
+    type: z.enum(["start", "stop", "reset", "new_page", "clear_subtitle", "force_subtitle", "force_mood", "next_track", "shuffle_topics", "test_sound"]),
     behaviorId: z.string().optional(),
     text: z.string().max(120).optional(),
     mood: z.string().optional(),

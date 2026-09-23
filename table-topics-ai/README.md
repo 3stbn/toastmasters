@@ -1,7 +1,8 @@
-# Table Topics AI
+# Habla y verás
 
-Noche de juegos Toastmasters: el orador improvisa en español y un proyector
-**a su espalda** reacciona en directo para el público. Las decisiones las toma
+Juego de improvisación: alguien habla en español y una pantalla reacciona en
+directo a lo que dice. Sirve para una noche de juegos, para una clase o para
+practicar. Las decisiones las toma
 [TypeSafe Jev](https://docs.typesafe.ai) (vía OpenRouter), un modelo que no
 genera texto: devuelve decisiones estructuradas con probabilidades.
 
@@ -13,8 +14,6 @@ genera texto: devuelve decisiones estructuradas con probabilidades.
    dice: Jev elige cada pocos segundos qué garabato trazar (de un vocabulario
    de ~130), con qué tamaño y color, y de vez en cuando pega una foto. Los
    trazos se dibujan animados y se enlazan con flechas, como un mapa mental.
-   Desde el móvil se puede pedir «¡Que se dé la vuelta!» para que el orador
-   vea su propio discurso dibujado.
 2. **Subtítulos de la verdad.** En pantalla van los subtítulos en directo de
    lo que dice el orador y, debajo, en amarillo, el subtexto que Jev detecta
    (haciendo tiempo, exagerando, comida, familia, animal, confesión, chiste,
@@ -35,8 +34,8 @@ hace de pantalla en horizontal, el otro escanea el QR y es el micrófono):
    el código y un QR.
 2. **Móvil**: escanear el QR (o entrar con el código). Es el **micrófono** y el
    mando: tocar el botón de escuchar (Chrome en Android, Safari en iPhone),
-   elegir juego, elegir uno de los tres temas («Otros tres» para cambiarlos) y
-   pulsar **Empezar**. Desde ahí también se para, se pasa de diapositiva o de
+   elegir juego, opcionalmente un tema (uno de los tres propuestos, «Otros
+   tres» para cambiarlos, o escribir otro) y pulsar **Empezar**. Desde ahí también se para, se pasa de diapositiva o de
    pista. Una ronda se para sola a los 10 minutos, y hay un tope de sesiones
    nuevas por día, para que una pestaña olvidada no salga cara. Los ajustes
    finos están en «Ajustes», al pie; ahí también se elige el **motor de decisiones**: «Nube» (rápido, por defecto) o «Local», que usa

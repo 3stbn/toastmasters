@@ -403,9 +403,6 @@ export class SessionDO extends DurableObject<Cloudflare.Env> {
       case "new_page":
         this.state = newPage(s);
         break;
-      case "turn_around":
-        s.canvas.cueAt = now;
-        break;
       case "test_sound":
         s.soundTestAt = now;
         break;

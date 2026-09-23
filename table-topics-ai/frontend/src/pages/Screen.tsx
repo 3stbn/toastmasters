@@ -33,9 +33,7 @@ export function Screen() {
   const micHere = params.get("mic") === "1";
   const [armed, setArmed] = useState(params.get("nosound") === "1");
   const [loaded, setLoaded] = useState(0);
-  const [cueUntil, setCueUntil] = useState(0);
   const player = useMemo(() => new MusicPlayer(), []);
-  const lastCueAt = useRef<number | null>(null);
   // A phone used as the display must not go to sleep either.
   useWakeLock(armed);
   const [portrait, setPortrait] = useState(window.innerHeight > window.innerWidth);
@@ -87,17 +85,6 @@ export function Screen() {
     if (status === "open") send({ type: "screen", sound: armed && audioUnlocked(), loaded });
   }, [armed, loaded, status, send]);
 
-  // Operator asked the speaker to turn around → chime + voice + banner.
-  useEffect(() => {
-    const at = state?.canvas.cueAt ?? 0;
-    if (lastCueAt.current !== null && at !== lastCueAt.current && at > 0) {
-      chime();
-      if (state?.settings.voiceCue) setTimeout(() => speak("¡Mira atrás!", "es-ES"), 500);
-      setCueUntil(Date.now() + 3000);
-    }
-    lastCueAt.current = at;
-  }, [state?.canvas.cueAt, state?.settings.voiceCue]);
-
   // Mood changed → crossfade music. Music only plays in "banda" while running.
   useEffect(() => {
     if (!state || !audioUnlocked()) return;
@@ -119,7 +106,6 @@ export function Screen() {
   if (status === "missing") return <SessionMissing code={upper} />;
 
   const modeTitle = state?.mode ? GAME_MODES.find((g) => g.id === state.mode)?.title : null;
-  const showCue = now < cueUntil;
   const light = !!state?.running && state.mode === "ilustrador";
 
   return (
@@ -146,7 +132,7 @@ export function Screen() {
       )}
 
       <div className={`pointer-events-none absolute top-0 right-0 left-0 flex items-start justify-between p-5 font-mono text-xs tracking-[0.3em] ${light ? "text-neutral-500" : "text-white/60"}`}>
-        <div className="uppercase">{modeTitle ?? "Table Topics AI"}</div>
+        <div className="uppercase">{modeTitle ?? "Habla y verás"}</div>
         <div className="flex items-center gap-4">
           {!armed && <span className="text-warning">sin sonido · haz clic</span>}
           {loaded < 1 && <span className="text-warning">música {Math.round(loaded * 100)} %</span>}
@@ -155,15 +141,6 @@ export function Screen() {
           <span className={status === "open" ? "" : "text-destructive"}>{upper}</span>
         </div>
       </div>
-
-      {showCue && (
-        <div className="pointer-events-none absolute inset-0 z-10 grid place-items-center">
-          <div className="rounded-3xl border-4 border-primary bg-black/85 px-16 py-10 text-center shadow-[0_0_120px_-20px_var(--primary)]" style={{ animation: "shout 3s ease-out forwards" }}>
-            <div className="font-mono text-lg uppercase tracking-[0.4em] text-primary">Orador</div>
-            <div className="font-display text-8xl font-bold text-white">¡Date la vuelta!</div>
-          </div>
-        </div>
-      )}
 
       {portrait && (
         <div className="pointer-events-none absolute inset-x-0 top-14 z-10 text-center font-mono text-xs tracking-[0.3em] text-warning uppercase">

@@ -10,12 +10,12 @@ export const GAME_MODES: { id: GameMode; title: string; tagline: string }[] = [
   {
     id: "ilustrador",
     title: "Ilustrador automático",
-    tagline: "Una pizarra dibuja en directo lo que dices: garabatos, flechas y alguna foto. El público lo ve; tú no.",
+    tagline: "Una pizarra dibuja en directo lo que dices: garabatos, flechas y alguna foto.",
   },
   {
     id: "subtitulos",
     title: "Subtítulos de la verdad",
-    tagline: "El público lee en pantalla lo que dices y, debajo, lo que de verdad está pasando.",
+    tagline: "En pantalla, lo que dices y, debajo, lo que de verdad está pasando.",
   },
   {
     id: "banda",
@@ -56,8 +56,6 @@ export interface SessionSettings {
   moodSwitchMargin: number;
   /** Music volume 0..1 on the screen. */
   musicVolume: number;
-  /** Speak "¡Mira atrás!" on the turn-around cue (besides the chime). */
-  voiceCue: boolean;
 }
 
 /** A round stops by itself after this long, so a forgotten session cannot keep calling the engine. */
@@ -78,7 +76,6 @@ export const DEFAULT_SETTINGS: SessionSettings = {
   moodSwitchThreshold: 0.35,
   moodSwitchMargin: 0.12,
   musicVolume: 0.5,
-  voiceCue: true,
 };
 
 export interface TranscriptSegment {
@@ -157,8 +154,6 @@ export interface SessionState {
     pending: string | null;
     /** Ids drawn recently (across pages) so the board does not repeat itself. */
     recent: string[];
-    /** Set by the operator: the screen chimes and shouts "¡Date la vuelta!". */
-    cueAt: number;
     /** Photos already pasted. */
     usedPhotos: string[];
     nextId: number;

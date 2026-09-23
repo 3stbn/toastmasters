@@ -106,7 +106,7 @@ export class JevClient {
             Authorization: `Bearer ${this.opts.apiKey}`,
             "Content-Type": "application/json",
             "HTTP-Referer": "https://github.com/3stbn/toastmasters",
-            "X-Title": "Table Topics AI",
+            "X-Title": "Habla y verás",
           },
           body: JSON.stringify({ model: this.model, state, questions }),
           signal: ctrl.signal,

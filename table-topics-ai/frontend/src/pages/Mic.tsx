@@ -1,10 +1,10 @@
 /**
  * The phone: microphone + remote control. Pick the game and topic, start,
- * stop, and nudge the round (new page, turn-around cue, another track).
+ * stop, and nudge the round (new page, another track).
  * Fine tuning lives on /control, linked at the bottom.
  */
 import { Link, useParams } from "wouter";
-import { Eraser, Pause, Play, RotateCcw, RotateCw, SkipForward, Volume2 } from "lucide-react";
+import { Eraser, Pause, Play, RotateCcw, SkipForward, Volume2 } from "lucide-react";
 import { MOODS } from "@shared/moods";
 import { GAME_MODES, MAX_ROUND_MINUTES } from "@shared/session";
 import { useSession } from "@/hooks/useSession";
@@ -23,7 +23,7 @@ export function Mic() {
   const mode = state?.mode ? GAME_MODES.find((g) => g.id === state.mode) : null;
   const mood = state ? MOODS.find((m) => m.id === state.banda.mood) : null;
   const screenReady = !!state && state.clients.screen > 0 && state.screenLoaded >= 1;
-  const canStart = !!state?.mode && !!state.topic && (screenReady || state.clients.screen === 0);
+  const canStart = !!state?.mode && (screenReady || state.clients.screen === 0);
   const lastDoodle = state?.canvas.elements.at(-1);
 
   return (
@@ -62,14 +62,9 @@ export function Mic() {
               </div>
               <div className="flex flex-wrap gap-2">
                 {state.mode === "ilustrador" && (
-                  <>
-                    <Button onClick={() => sendAction({ type: "turn_around" })}>
-                      <RotateCw className="size-4" /> ¡Que se dé la vuelta!
-                    </Button>
-                    <Button variant="outline" onClick={() => sendAction({ type: "new_page" })}>
-                      <Eraser className="size-4" /> Página nueva
-                    </Button>
-                  </>
+                  <Button variant="outline" onClick={() => sendAction({ type: "new_page" })}>
+                    <Eraser className="size-4" /> Página nueva
+                  </Button>
                 )}
                 {state.mode === "subtitulos" && <Button onClick={() => sendAction({ type: "force_subtitle" })}>Lanzar un subtítulo</Button>}
                 {state.mode === "banda" && (

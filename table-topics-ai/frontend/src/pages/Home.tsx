@@ -37,15 +37,15 @@ export function Home() {
   return (
     <main className="mx-auto flex min-h-dvh max-w-3xl flex-col px-4 pt-safe pb-safe">
       <section className="flex flex-1 flex-col justify-center py-16">
-        <p className="font-mono text-xs uppercase tracking-[0.3em] text-primary">Toastmasters · noche de juegos</p>
+        <p className="font-mono text-xs uppercase tracking-[0.3em] text-primary">Juego de improvisación</p>
         <h1 className="mt-3 font-display text-5xl font-semibold leading-[1.02] tracking-tight sm:text-7xl">
-          El público ve lo que
+          Habla.
           <br />
-          <em className="text-primary">el orador</em> no puede.
+          <em className="text-primary">La pantalla</em> reacciona.
         </h1>
         <p className="mt-6 max-w-xl text-lg text-muted-foreground">
-          Improvisa en español. El proyector, a tu espalda, reacciona en directo: diapositivas imposibles, subtítulos
-          sinceros o una banda sonora que sigue tu tono.
+          Improvisa en español sobre lo que quieras. En directo, una pizarra dibuja lo que dices, unos subtítulos
+          cuentan lo que de verdad está pasando o la banda sonora sigue tu tono.
         </p>
 
         <div className="mt-10 flex flex-col gap-8 sm:flex-row sm:items-end">

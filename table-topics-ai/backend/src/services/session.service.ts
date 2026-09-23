@@ -35,7 +35,7 @@ export function newSessionState(code: string, now: number): SessionState {
     behaviors: DEFAULT_BEHAVIORS.map((b) => ({ ...b, phrases: [...b.phrases] })),
     transcript: [],
     interim: "",
-    canvas: { elements: [], page: 1, pending: null, recent: [], cueAt: 0, usedPhotos: [], nextId: 1 },
+    canvas: { elements: [], page: 1, pending: null, recent: [], usedPhotos: [], nextId: 1 },
     subtitles: { current: null, lastShownAt: 0, lastByBehavior: {}, lastPhraseByBehavior: {}, history: [], scores: {} },
     banda: { mood: DEFAULT_MOOD, since: now, trackIndex: 0, scores: {} },
     decisions: [],

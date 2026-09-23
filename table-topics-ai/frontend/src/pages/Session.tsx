@@ -247,12 +247,9 @@ function Running({ state, interim, sendAction }: { state: SessionState; interim:
         </div>
         <div className="mt-4 flex flex-wrap gap-2">
           {state.mode === "ilustrador" && (
-            <>
-              <Button onClick={() => sendAction({ type: "turn_around" })}>¡Que se dé la vuelta!</Button>
-              <Button variant="outline" onClick={() => sendAction({ type: "new_page" })}>
-                Página nueva
-              </Button>
-            </>
+            <Button variant="outline" onClick={() => sendAction({ type: "new_page" })}>
+              Página nueva
+            </Button>
           )}
           {state.mode === "subtitulos" && (
             <>

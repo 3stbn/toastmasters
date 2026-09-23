@@ -26,7 +26,7 @@ export function subtitleQuestions(behaviors: Behavior[]): Record<string, JevQues
 
 export function subtitleState(topic: string, recent: string, earlier: string) {
   return {
-    context: "Live transcript (Spanish, automatic speech recognition, may contain errors) of an improvised 1-2 minute speech at a Toastmasters game night.",
+    context: "Live transcript (Spanish, automatic speech recognition, may contain errors) of an improvised 1-2 minute talk in a speaking game.",
     tema: topic || "(tema libre / desconocido)",
     transcripcion_anterior: earlier || "(nada todavía)",
     transcripcion_reciente: recent,

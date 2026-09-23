@@ -1,7 +1,9 @@
+import { useState } from "react";
 import { GAME_MODES, type SessionState } from "@shared/session";
 import type { ClientAction, ConfigPatch } from "@shared/protocol";
 import { Shuffle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
 
 export function GamePicker({
@@ -14,7 +16,16 @@ export function GamePicker({
   onAction: (action: ClientAction) => void;
 }) {
   const selected = GAME_MODES.find((g) => g.id === state.mode);
-  const options = state.topicOptions.length ? state.topicOptions : state.topic ? [state.topic] : [];
+  const [custom, setCustom] = useState("");
+  // The three drawn suggestions, plus a typed topic when there is one.
+  const options = state.topic && !state.topicOptions.includes(state.topic) ? [...state.topicOptions, state.topic] : state.topicOptions;
+  const submitCustom = (e: React.FormEvent) => {
+    e.preventDefault();
+    const t = custom.trim();
+    if (!t) return;
+    onPatch({ topic: t });
+    setCustom("");
+  };
 
   return (
     <div className="space-y-4">
@@ -42,7 +53,7 @@ export function GamePicker({
         <div className="space-y-2">
           <div className="flex items-center justify-between">
             <span className="text-xs uppercase tracking-widest text-muted-foreground">
-              {state.mode === "ilustrador" ? "Título de la charla" : "Tema"} · el orador elige uno
+              {state.mode === "ilustrador" ? "Título de la charla" : "Tema"} · opcional
             </span>
             <Button variant="ghost" size="sm" onClick={() => onAction({ type: "shuffle_topics" })}>
               <Shuffle className="size-4" /> Otros tres
@@ -67,6 +78,13 @@ export function GamePicker({
               );
             })}
           </div>
+          <form onSubmit={submitCustom} className="flex gap-2">
+            <Input value={custom} onChange={(e) => setCustom(e.target.value)} placeholder="Otro tema…" maxLength={120} autoComplete="off" />
+            <Button type="submit" variant="outline" disabled={!custom.trim()}>
+              Usar
+            </Button>
+          </form>
+          <p className="text-xs text-muted-foreground">Sin tema también funciona: habla de lo que quieras.</p>
         </div>
       )}
     </div>

@@ -25,9 +25,7 @@ export function WaitingView({
           : !soundReady
             ? "Móvil conectado. Haz clic aquí para activar el sonido."
             : state.mode
-              ? state.topic
-                ? "Todo listo. Pulsa «Empezar» en el móvil."
-                : "El orador elige un tema; márcalo en el móvil."
+              ? "Todo listo. Elige un tema si quieres y pulsa «Empezar» en el móvil."
               : "Elige el juego en el móvil.";
 
   return (
@@ -37,7 +35,7 @@ export function WaitingView({
           <QrCode value={sessionUrl(state.code, "mic")} size={260} />
         </div>
         <div>
-          <div className="font-mono text-sm uppercase tracking-[0.35em] text-primary">Table Topics AI</div>
+          <div className="font-mono text-sm uppercase tracking-[0.35em] text-primary">Habla y verás</div>
           <div className="mt-2 font-mono text-[9rem] leading-none font-bold tracking-[0.2em] text-white">{state.code}</div>
           <div className="mt-6 font-display text-3xl text-white/80">
             {mode ? mode.title : "Elige el juego desde el móvil"}

@@ -15,7 +15,7 @@ export function StatusBar({ state, status, title }: { state: SessionState | null
   return (
     <header className="flex flex-wrap items-center gap-x-4 gap-y-2 border-b border-border pb-3">
       <Link href="/" className="font-display text-lg font-semibold tracking-tight">
-        Table Topics <span className="text-primary">AI</span>
+        Habla y <span className="text-primary">verás</span>
       </Link>
       <span className="text-muted-foreground">/</span>
       <span className="text-sm text-muted-foreground">{title}</span>

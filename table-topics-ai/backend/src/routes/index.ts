@@ -9,9 +9,9 @@ export function registerRoutes(app: BindedApp): void {
   app.doc("/openapi.json", {
     openapi: "3.0.0",
     info: {
-      title: "Table Topics AI",
+      title: "Habla y verás",
       version: "0.1.0",
-      description: "Toastmasters game night: live Jev (TypeSafe) reactions to improvised Spanish speeches.",
+      description: "Speaking game: live Jev (TypeSafe) reactions to improvised Spanish talks.",
     },
   });
 }

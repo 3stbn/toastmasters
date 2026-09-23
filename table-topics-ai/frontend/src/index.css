@@ -109,10 +109,3 @@
   0% { opacity: 0; scale: 0.2; }
   100% { opacity: 1; scale: 1; }
 }
-@keyframes shout {
-  0% { transform: scale(0.6) rotate(-6deg); opacity: 0; }
-  12% { transform: scale(1.08) rotate(2deg); opacity: 1; }
-  20% { transform: scale(1) rotate(0); }
-  85% { opacity: 1; }
-  100% { opacity: 0; transform: scale(1.02); }
-}
